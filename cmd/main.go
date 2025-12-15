@@ -93,12 +93,8 @@ func main() {
 
 	app := fiber.New(
 		fiber.Config{
-			Prefork:                   *prefork,
-			GETOnly:                   true,
-			DisableStartupMessage:     false,
-			DisablePreParseMultipartForm: true,
-			// Disable path normalization to preserve double slashes in URLs like https://
-			DisablePathNormalizing:    true,
+			Prefork: *prefork,
+			GETOnly: true,
 		},
 	)
 
